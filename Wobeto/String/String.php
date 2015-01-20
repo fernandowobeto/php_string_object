@@ -61,7 +61,7 @@ class String{
 	}
 
 	public function replace($search, $replace){
-		return String::factory(str_replace($searcg, $replace, $this->string));
+		return String::factory(str_replace($search, $replace, $this->string));
 	}
 
 	public function split($split_length = 1){
