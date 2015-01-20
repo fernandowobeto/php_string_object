@@ -29,7 +29,7 @@ class String{
 		return strlen($this->string);
 	}
 
-	public function rev(){
+	public function reverse(){
 		return String::factory(strrev($this->string));
 	}
 
@@ -45,11 +45,11 @@ class String{
 		return String::factory(trim($this->string));
 	}
 
-	public function ucfirst(){
+	public function ucFirst(){
 		return String::factory(ucfirst($this->string));
 	}
 
-	public function ucwords(){
+	public function ucWords(){
 		return String::factory(ucwords($this->string));
 	}
 
@@ -58,6 +58,20 @@ class String{
 			return String::factory(substr($this->string, $start, $length));	
 		}
 		return String::factory(substr($this->string, $start));
+	}
+
+	public function replace($search, $replace){
+		return String::factory(str_replace($searcg, $replace, $this->string));
+	}
+
+	public function split($split_length = 1){
+		return array_map(function($value){
+			return String::factory($value);
+		}, str_split($this->string, $split_length));
+	}
+
+	public function shuffle(){
+		return String::factory(str_shuffle($this->string));
 	}
 
 	public function __toString(){
