@@ -1,0 +1,12 @@
+{
+    "name": "wobeto/string",
+    "description": "object string",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fernando Wobeto",
+            "email": "fernando.wobeto@solucoesglobais.com.br"
+        }
+    ],
+    "require": {}
+}
