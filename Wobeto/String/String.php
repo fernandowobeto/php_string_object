@@ -74,6 +74,20 @@ class String{
 		return String::factory(str_shuffle($this->string));
 	}
 
+	public function nl2br(){
+		return String::factory(nl2br($this->string));
+	}
+
+	public function format(){
+		$args = func_get_args();
+		if(count($args) == 1){
+			if(is_array($args[0])){
+				$args = $args[0];
+			}
+		}
+		return String::factory(vsprintf($this->string, $args));
+	}
+
 	public function __toString(){
 		return $this->string;
 	}

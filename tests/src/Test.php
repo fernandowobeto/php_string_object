@@ -66,4 +66,10 @@ class Test extends \PHPUnit_Framework_Testcase
 		$this->assertEquals(3, count($explode));
 	}
 
+	public function testFormat(){
+		$string = new String('%s a %s');
+		$this->assertEquals('Only a test', $string->format('Only', 'test'));
+		$this->assertEquals('Only a test', $string->format(['Only', 'test']));		
+	}
+
 }
